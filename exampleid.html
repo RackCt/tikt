@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Example IDs - Empire Fakes</title>
+<style>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  nav {
+    background-color: #98FF98;
+    padding: 25px 0;
+    text-align: center;
+    position: relative;
+  }
+  nav a {
+    color: black;
+    text-decoration: none;
+    padding: 0 10px;
+    font-weight: bold;
+    margin: 0 5px;
+  }
+  nav a:hover {
+    color: red;
+  }
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+  }
+  .title {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Adjusted gap between columns */
+    padding: 20px;
+  }
+  .grid-item {
+    background-size: contain; /* Ensure entire image is visible */
+    background-repeat: no-repeat; /* Prevent repetition of image */
+    background-position: center center; /* Center the image */
+    height: 200px;
+  }
+  .header-logo {
+    display: none; /* Hide the logo by default */
+    width: 50px; /* Set the width of the logo */
+    position: absolute; /* Position the logo in the center */
+    left: 52%; /* Move the logo to the center horizontally */
+    top: 0px; /* Move the logo up by 6 pixels */
+    transform: translateX(-50%); /* Adjust horizontal position to center */
+  }
+  @media (max-width: 768px) {
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 25px 0; /* Adjust padding to center menu icon vertically */
+    }
+    .menu-icon {
+      display: block;
+      top: 5px; /* Adjust top position to align the icon in the center of the header */
+    }
+    .nav-links {
+      display: none;
+      position: absolute;
+      background-color: #98FF98;
+      width: 100%;
+      top: 40px;
+      left: 0;
+      flex-direction: column;
+      padding: 10px 0;
+    }
+    .nav-links.show {
+      display: flex;
+    }
+    .grid-container {
+      grid-template-columns: 1fr; /* Stack images vertically on smaller screens */
+    }
+    .header-logo {
+      display: block; /* Show the logo for mobile */
+    }
+  }
+</style>
+</head>
+<body>
+  <!-- Mobile responsive header from Example IDs page -->
+  <nav>
+    <span class="menu-icon" onclick="toggleNav()">☰</span>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="pricing.html">Group</a>
+      <a href="order.html">Order</a>
+      <a href="exampleid.html">Example IDs</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <img src="https://gcdnb.pbrd.co/images/nmhfYDwnstQs.webp?o=1" alt="Logo" class="header-logo">
+  </nav>
+
+  <!-- Original content continues here -->
+  <h2 class="title">Examples of our IDs</h2>
+
+  <div class="grid-container">
+    <!-- Placeholders for 6 images -->
+    <div class="grid-item" style="background-image: url('https://i2.paste.pics/QRGIG.png?trs=a753e8860642c76e435c362497d429ab76e0469eb4fe8831a09eee9cec3d9447&rand=DP2Rv8L3IO');"></div>
+    <div class="grid-item" style="background-image: url('https://i2.paste.pics/QRGIK.png?trs=a753e8860642c76e435c362497d429ab76e0469eb4fe8831a09eee9cec3d9447&rand=1hnZMzA4BF');"></div>
+    <div class="grid-item" style="background-image: url('https://i2.paste.pics/QRGIT.png?trs=a753e8860642c76e435c362497d429ab76e0469eb4fe8831a09eee9cec3d9447&rand=FeL6HUrukO');"></div>
+    <div class="grid-item" style="background-image: url('https://i2.paste.pics/QRGIW.png?trs=a753e8860642c76e435c362497d429ab76e0469eb4fe8831a09eee9cec3d9447&rand=p1vAtPV6O7');"></div>
+    <div class="grid-item" style="background-image: url('https://i2.paste.pics/QRGJ0.png?trs=a753e8860642c76e435c362497d429ab76e0469eb4fe8831a09eee9cec3d9447&rand=1hOFKJuYgU');"></div>
+    <div class="grid-item" style="background-image: url('https://i2.paste.pics/QRGJ2.png?trs=a753e8860642c76e435c362497d429ab76e0469eb4fe8831a09eee9cec3d9447&rand=8b9tjAlCF2');"></div>
+  </div>
+
+<script>
+  function toggleNav() {
+    var links = document.querySelector('.nav-links');
+    links.style.display = links.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+</body>
+</html>
